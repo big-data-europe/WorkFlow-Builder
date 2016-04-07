@@ -1,7 +1,7 @@
 {
   "name": "pipeline-builder",
   "version": "0.0.0",
-  "description": "Building Big Data pipelines in mu.semte.ch",
+  "description": "Application to build and export Big Data pipelines",
   "private": true,
   "directories": {
     "doc": "doc",
