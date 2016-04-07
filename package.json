@@ -19,6 +19,7 @@
   "author": "Erika Pauwels <erika.pauwels@gmail.com>, Aad Versteden <madnificent@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "adm-zip": "^0.4.7",
     "broccoli-asset-rev": "^2.4.2",
     "ember-ajax": "0.7.1",
     "ember-cli": "2.4.3",
