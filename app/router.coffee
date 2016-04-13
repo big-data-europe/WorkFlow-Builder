@@ -5,6 +5,7 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
-
+  @route 'pipelines', ->
+    @route 'index'
 
 `export default Router;`
