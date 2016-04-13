@@ -7,5 +7,6 @@ Router = Ember.Router.extend
 Router.map ->
   @route 'pipelines', ->
     @route 'index'
+    @route 'new'
 
 `export default Router;`
