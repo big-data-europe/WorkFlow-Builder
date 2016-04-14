@@ -1,1 +1,27 @@
+<h3>Pipelines</h3>
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="col s12 m6">
+	{{#link-to 'pipelines.new' class="btn"}}Create{{/link-to}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m6">
+	{{#each model as |pipeline|}}
+	  {{#md-card title=pipeline.title}}
+	    {{#md-card-content}}
+	      {{pipeline.description}}
+	    {{/md-card-content}}
+	    {{#md-card-action}}
+	      {{#link-to 'pipelines'}}Edit{{/link-to}}
+	      <a {{action 'delete' pipeline}}>Delete</a>
+	    {{/md-card-action}}
+	  {{/md-card}}
+	{{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
 {{outlet}}

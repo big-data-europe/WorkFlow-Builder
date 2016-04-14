@@ -6,3 +6,7 @@ $secondary-color: color("pink", "accent-4");
 @import 'components/variables';
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+[data-ember-action] {
+  cursor: pointer;
+}
