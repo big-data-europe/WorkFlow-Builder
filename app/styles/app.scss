@@ -14,6 +14,12 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
     cursor: pointer;
 }
 
+.card .badge {
+    background-color: $badge-bg-color;
+    color: white;
+    top: 15px;
+}
+
 .action-panel {
     background-color: $secondary-color;
     @extend .z-depth-1;

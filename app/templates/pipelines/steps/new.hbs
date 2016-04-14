@@ -1,0 +1,17 @@
+<h4>Add step</h4>
+<div class="row">
+  <div class="col s12">
+    <form>
+      <div class="row">
+	{{md-input value=model.title label='Title' class="col s12 m6"}}
+	{{md-input value=model.code label='Code' class="col s12 m6"}}
+	{{md-textarea value=model.description label='Description' class="col s12"}}
+      </div>
+      <div class="row">
+	{{md-btn text='Add' action='save'}}
+	{{md-btn text='Cancel' action='cancel'}}
+      </div>
+    </form>
+  </div>
+</div>
+

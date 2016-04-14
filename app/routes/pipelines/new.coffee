@@ -5,8 +5,8 @@ PipelinesNewRoute = Ember.Route.extend
     @store.createRecord 'pipeline', {}
   actions:
     save: ->
-      @modelFor('pipelines.new').save().then =>
-        @transitionTo 'pipelines'
+      @modelFor('pipelines.new').save().then (pipeline) =>
+        @transitionTo 'pipelines.steps', pipeline
     cancel: ->
       @modelFor('pipelines.new').rollbackAttributes()
       @transitionTo 'pipelines'

@@ -8,5 +8,8 @@ Router.map ->
   @route 'pipelines', ->
     @route 'index'
     @route 'new'
+    @route 'steps', { path: '/:pipeline_id/steps' }, ->
+      @route 'index'
+      @route 'new'
 
 `export default Router;`
