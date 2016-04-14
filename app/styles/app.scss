@@ -2,11 +2,25 @@
 
 $primary-color: color("blue-grey", "lighten-1");
 $secondary-color: color("pink", "accent-4");
+$card-link-color: $secondary-color !default;
+$card-link-color-light: lighten($secondary-color, 20%) !default;
 
 @import 'components/variables';
 @import 'materialize';
 @import 'ember-cli-materialize';
 
-[data-ember-action] {
-  cursor: pointer;
+[data-ember-action],
+.action-panel {
+    cursor: pointer;
+}
+
+.action-panel {
+    background-color: $secondary-color;
+    @extend .z-depth-1;
+    a {
+	color: white;
+    }
+    &:hover {
+	@extend .z-depth-1-half;
+    }
 }
