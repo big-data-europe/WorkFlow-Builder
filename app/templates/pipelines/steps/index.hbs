@@ -2,17 +2,21 @@
 
 <div class="row">
   <div class="col s12">
-    {{#each model as |step|}}
-      {{#md-card title=step.title}}
-	{{md-badge text=step.code}}
-	{{#md-card-content}}
-	  {{step.description}}
-	{{/md-card-content}}
-	{{#md-card-action}}
-	  <a {{action 'delete' step}}>Delete</a>
-	{{/md-card-action}}
-      {{/md-card}}
-    {{/each}}
+    {{#sortable-group tagName="div" onChange="reorderSteps" as |group|}}
+      {{#each sortedSteps as |step|}}
+	{{#sortable-item tagName="div" model=step group=group}}
+	  {{#md-card title=step.title}}
+	    {{md-badge text=step.code}}
+	    {{#md-card-content}}
+	      {{step.description}}
+	    {{/md-card-content}}
+	    {{#md-card-action}}
+	      <a {{action 'delete' step}}>Delete</a>
+	    {{/md-card-action}}
+	  {{/md-card}}
+	{{/sortable-item}}
+      {{/each}}
+    {{/sortable-group}}
     {{#md-card class="action-panel center-align" bodyClass="white-text"}}
       {{#md-card-content}}
 	{{#link-to 'pipelines.steps.new'}}<i class="medium material-icons">add</i>{{/link-to}}

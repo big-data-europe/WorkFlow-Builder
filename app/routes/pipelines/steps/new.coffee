@@ -2,8 +2,10 @@
 
 PipelinesStepsNewRoute = Ember.Route.extend
   model: ->
+    pipeline = @modelFor('pipelines.steps')
     @store.createRecord 'step',
-      pipeline: @modelFor('pipelines.steps')
+      order: pipeline.get('steps.length')
+      pipeline: pipeline
   actions:
     save: ->
       @modelFor('pipelines.steps.new').save().then (step) =>
