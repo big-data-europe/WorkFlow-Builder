@@ -5,7 +5,6 @@ Step = DS.Model.extend
   description: DS.attr('string')
   code: DS.attr('string')
   order: DS.attr('number')
-  status: DS.attr('status')
 
   pipeline: DS.belongsTo('pipeline')
   
