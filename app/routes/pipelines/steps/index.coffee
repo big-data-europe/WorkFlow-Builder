@@ -13,5 +13,7 @@ PipelinesStepsIndexRoute = Ember.Route.extend
           if i > index
             step.set('order', i - 1)
             step.save()
-
+    newStep: ->
+      @transitionTo('pipelines.steps.new')
+      
 `export default PipelinesStepsIndexRoute`

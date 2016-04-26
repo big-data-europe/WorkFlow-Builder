@@ -14,10 +14,31 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
     cursor: pointer;
 }
 
-.card .badge {
-    background-color: $badge-bg-color;
-    color: white;
-    top: 15px;
+.card {
+
+    .badge {
+	background-color: $badge-bg-color;
+	color: white;
+	top: 15px;
+    }
+
+    .dragable {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: color("grey", "lighten-1");
+    }
+
+    .card-content {
+	padding: 30px 20px;
+    }
+
+    &.new-step,
+    &.new-step .card-action a:not(.btn):not(.btn-large):not(.btn-floating).disabled {
+	font-style: italic;
+	color: color("grey", "base");
+    }
+
 }
 
 .action-panel {
@@ -36,6 +57,7 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 /** ember-sortable */
 .sortable-item {
     transition: all .125s;
+    cursor: move;
 
     &.is-dragging {
 	transition-duration: 0s;
