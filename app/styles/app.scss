@@ -22,6 +22,8 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 
 .action-panel {
     background-color: $secondary-color;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
     @extend .z-depth-1;
     a {
 	color: white;
@@ -29,6 +31,22 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
     &:hover {
 	@extend .z-depth-1-half;
     }
+}
+
+/** ember-sortable */
+.sortable-item {
+    transition: all .125s;
+
+    &.is-dragging {
+	transition-duration: 0s;
+	@extend .z-depth-2;
+	z-index: 10;
+    }
+}
+
+.sortable-item.is-dropping {
+  background: #f66;
+  z-index: 10;
 }
 
 /** Workaround to disable validation on form fields */

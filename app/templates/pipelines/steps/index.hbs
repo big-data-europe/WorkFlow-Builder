@@ -4,7 +4,7 @@
   <div class="col s12">
     {{#sortable-group tagName="div" onChange="reorderSteps" as |group|}}
       {{#each sortedSteps as |step|}}
-	{{#sortable-item tagName="div" model=step group=group}}
+	{{#sortable-item tagName="div" model=step group=group spacing=15}}
 	  {{#md-card title=step.title}}
 	    {{md-badge text=step.code}}
 	    {{#md-card-content}}
