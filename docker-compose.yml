@@ -21,4 +21,6 @@ services:
     volumes:
       - ./data/db:/data
   pipeline:
-    image: bde2020/pipeline-service:0.1.0
+    image: bde2020/mu-pipeline-service:0.1.0
+  export:
+    image: bde2020/mu-pipeline-export-service:0.1.0
