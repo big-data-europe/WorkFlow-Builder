@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: bde2020/pipeline-builder-frontend:0.2.1
+    image: bde2020/pipeline-builder-frontend:0.3.0
     links:
       - identifier:backend
     ports:
@@ -13,7 +13,7 @@ services:
     volumes:
       - ./config:/config
   database:
-    image: tenforce/virtuoso:1.0.0-virtuoso7.2.2
+    image: tenforce/virtuoso:1.0.0-virtuoso7.2.4
     environment:
       SPARQL_UPDATE: "true"
     ports:
@@ -22,3 +22,6 @@ services:
       - ./data/db:/data
   pipeline:
     image: bde2020/mu-pipeline-service:0.1.0
+  export:
+    image: bde2020/mu-pipeline-export-service:0.1.0
+

@@ -21,6 +21,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://pipeline/steps/"
   end
 
+  match "/export/*path" do
+    Proxy.forward conn, path, "http://export/"
+  end
+
   match _ do
     send_resp( conn, 404, "Route not found" )
   end
