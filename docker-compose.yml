@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: bde2020/pipeline-builder-frontend:0.4.2
+    image: bde2020/pipeline-builder-frontend:0.5.2
     links:
       - identifier:backend
     ports:
